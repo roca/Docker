@@ -1,2 +1,2 @@
 # Docker
-Docker playground
+Docker playground for testing and course work
