@@ -1,5 +1,5 @@
 mongo:
-  image: '<yourHubAccount>/mongo:latest'
+  image: 'rcampbell/mongo:latest'
   environment:
     - MONGODB_DBNAME=codeWithDan
     - MONGODB_PASSWORD=password
@@ -11,7 +11,7 @@ mongo:
   ports:
     - '27017:27017'
 nginx:
-  image: '<yourHubAccount>/nginx:latest'
+  image: 'rcampbell/nginx:latest'
   links:
     - node1
     - node2
@@ -20,7 +20,7 @@ nginx:
     - '80:80'
     - '443:443'
 node1:
-  image: '<yourHubAccount>/node-codewithdan:latest'
+  image: 'rcampbell/node-codewithdan:latest'
   environment:
     - NODE_ENV=production
   links:
@@ -30,7 +30,7 @@ node1:
     - '8080'
   working_dir: /var/www/codewithdan
 node2:
-  image: '<yourHubAccount>/node-codewithdan:latest'
+  image: 'rcampbell/node-codewithdan:latest'
   environment:
     - NODE_ENV=production
   links:
@@ -40,7 +40,7 @@ node2:
     - '8080'
   working_dir: /var/www/codewithdan
 node3:
-  image: '<yourHubAccount>/node-codewithdan:latest'
+  image: 'rcampbell/node-codewithdan:latest'
   environment:
     - NODE_ENV=production
   links:
@@ -50,6 +50,6 @@ node3:
     - '8080'
   working_dir: /var/www/codewithdan
 redis:
-  image: '<yourHubAccount>/redis:latest'
+  image: 'rcampbell/redis:latest'
   ports:
     - '6379'
