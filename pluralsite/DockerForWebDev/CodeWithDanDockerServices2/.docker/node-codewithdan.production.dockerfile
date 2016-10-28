@@ -4,6 +4,7 @@ COPY    . /var/www/codewithdan
 WORKDIR /var/www/codewithdan
 
 RUN npm install -g pm2@latest
+RUN npm install
 
 RUN mkdir -p /var/log/pm2
 
